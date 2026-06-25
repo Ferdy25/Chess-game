@@ -187,4 +187,4 @@ main.js
 
 **Happy playing!** ♟️
 
-For detailed architecture documentation, see `STRUCTURE.md`
+
