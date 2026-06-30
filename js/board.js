@@ -182,9 +182,13 @@ function handleClick(r, c) {
 
   // ──── PIECE SELECTION ----
   if (clickedPiece && colorOf(clickedPiece) === turn) {
-    // User clicked their own piece: select it
-    selected = [r, c];
-    legalMoves = getLegalMoves(board, r, c, castling, enPassant);
+    // Only recalculate moves if selecting a DIFFERENT piece
+    // Lock moves after first click (prevent "farming" for better moves)
+    if (!selected || selected[0] !== r || selected[1] !== c) {
+      selected = [r, c];
+      legalMoves = getLegalMoves(board, r, c, castling, enPassant);
+    }
+    // If clicking same piece again, do nothing - moves stay locked
   } else {
     // User clicked empty square or opponent's piece: deselect
     selected = null;
