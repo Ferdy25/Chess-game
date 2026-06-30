@@ -135,6 +135,14 @@ coverage/                  # Coverage reports
 dist-test/                # Test distribution
 
 # ────────────────────────────────────────────────────────────────────────────
+# NODE & BUILD
+# Don't track dependencies or build outputs
+# ────────────────────────────────────────────────────────────────────────────
+node_modules/              # NPM dependencies
+package-lock.json          # Lock file
+js-min/                    # Minified output (generate dengan: node build.js)
+
+# ────────────────────────────────────────────────────────────────────────────
 # OLD/DEPRECATED FILES
 # Keep only when necessary for migration purposes
 # ────────────────────────────────────────────────────────────────────────────
