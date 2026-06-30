@@ -1,0 +1,23 @@
+{
+  "name": "chess",
+  "version": "1.0.0",
+  "description": "A beautiful, fully-featured chess game built with vanilla HTML, CSS, and JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ferdy25/Chess-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ferdy25/Chess-game/issues"
+  },
+  "homepage": "https://github.com/Ferdy25/Chess-game#readme",
+  "devDependencies": {
+    "terser": "^5.48.0"
+  }
+}
