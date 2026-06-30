@@ -156,8 +156,15 @@ function handleClick(r, c) {
     const move = legalMoves.find(m => m[0] === r && m[1] === c);
     const selectedPiece = board[selected[0]][selected[1]];
 
-    // Check for pawn promotion (pawn reaches last rank)
-    if (selectedPiece.toUpperCase() === 'P' && (r === 0 || r === 7)) {
+    // Check for pawn promotion (pawn reaches ENEMY's back rank only)
+    // White pawn (P) promotes at rank 0 (enemy side)
+    // Black pawn (p) promotes at rank 7 (enemy side)
+    const isWhitePawn = selectedPiece === 'P';
+    const isBlackPawn = selectedPiece === 'p';
+    const whitePromotionRank = (isWhitePawn && r === 0);
+    const blackPromotionRank = (isBlackPawn && r === 7);
+
+    if ((whitePromotionRank || blackPromotionRank)) {
       // Store move info and show promotion modal instead of executing
       pendingPromotion = {
         from: selected,
