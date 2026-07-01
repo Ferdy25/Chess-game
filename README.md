@@ -1,4 +1,4 @@
-# ♟ Elegant Chess - Refactored Code
+# ♟Chaos Chess - Refactored Code
 
 A beautiful, fully-featured chess game built with vanilla HTML, CSS, and JavaScript.
 
